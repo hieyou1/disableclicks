@@ -19,12 +19,15 @@ function disableClicks(olid, ifls) {
   function enableClicks(olid) {
     if (!olid) {
       var olid = localStorage.getItem("olid");
-      localStorage.removeItem("olid");
+      var usls = true;
     }
     if (!olid) {
       return false;
     } else {
       var olidelem = document.getElementById(olid);
       document.body.removeChild(olidelem);
+      if (usls == true) {
+        localStorage.removeItem("olid");
+      }
     }
   }
