@@ -29,3 +29,4 @@ function disableClicks(olid) {
       document.body.removeChild(style);
       document.body.removeChild(olidelem);
     }
+  }
